@@ -6,16 +6,16 @@
                 <h3 class="h"><marquee scrollamount=10s>Bank Account Login... {{aim}}</marquee></h3>
                 
                 <div class="box1">
-                 <input id="accno" type="text" class="input" (change)="accnoChange($event)" placeholder="Account Number" [value]="accnum" >
+                 <input id="accno" type="text" class="input" #accno placeholder="Account Number" [value]="accnum" >
                 </div>
                 <div class="box2">
-                 <input id="pswd" type="password" class="input" (change)="pwdChange($event)" placeholder="Password" >
+                 <input id="pswd" type="password" class="input" #pswd placeholder="Password" >
                 </div>
                 <div class="for1" >
                  <a href="#" class="for">Forget Password?</a>
                 </div>
                 <div class="but">
-                 <button  type="submit" (click)="login()" class="btn btn-primary" style="width: 80%; background-color: brown;">LogIn</button>
+                 <button  type="submit" (click)="login(accno,pswd)" class="btn btn-primary" style="width: 80%; background-color: brown;">LogIn</button>
                 </div>
                 <div class="but">
                  <button type="button" class="btn btn-primary" style="width: 80%; background-color: crimson;">Create Account</button>

@@ -23,17 +23,18 @@ export class LoginComponent implements OnInit {
   }
   accnoChange(event:any){
     this.accno=event.target.value;
-    alert(this.accno)
+    console.log(this.accno);
     
   }
   pwdChange(event:any){
     this.pwd=event.target.value;
-    alert(this.pwd)
-  }
-  login(){
+    console.log(this.pwd);
     
-        var acno = this.accno;
-        var pswd = this.pwd;
+  }
+  login(a:any,p:any){
+    
+        var acno = a.value;
+        var pswd = p.value;
         let details=this.accountdetails
         if (acno in details) {
             if (pswd == details[acno]['password']) {
